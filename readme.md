@@ -43,7 +43,7 @@ Install ANASFV by PyPI:
 pip install anasfv
 ```
 
-It may not be easy to successfully install all the dependent software, we provide a docker installation:
+It may not be easy to successfully install all the dependent software. So we provide a docker installation:
 ```
 docker.....
 ```
@@ -61,7 +61,7 @@ download_asfv_genome.py
 ### Part 1 (Assembling a genome):
 Finding nearest genome from "./single_fasta" as ref to perform mapping assebly. Then two rounds of polish.
 ```
-mapping_assembly.py -p 4 -r single_fasta -i test.fq -o genome.fasta --medaka <suitable_model> --homopolish <suitable_model> 
+mapping_assembly.py -p 4 -r single_fasta -i test.fq -o genome.fasta --medaka r941_min_high_g303 --homopolish R9.4.pkl 
 ```
 ### Part 2 (Genome completeness evaluation):
 We only established consensus gene sets for genotype I and genotype II. Using -c to assign consensus gene sets.
