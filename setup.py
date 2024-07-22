@@ -23,8 +23,8 @@ setup(
                'anasfv/find_near_ref.py',
                'anasfv/completeness.py',
                'anasfv/recombination_test.py',
-               'anasfv/get_cds_alignments.py'
-               'anasfv/mapping_assembly.py'
-               'anasfv/make_tree.py'
+               'anasfv/get_cds_alignments.py',
+               'anasfv/mapping_assembly.py',
+               'anasfv/make_tree.py',
                 ]
 )
