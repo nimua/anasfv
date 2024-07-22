@@ -62,7 +62,7 @@ if __name__=="__main__":
         command = f'medaka_consensus -i {input_reads} -d {output} -o medaka_result -m {medaka_model} -t {num_processes} > medaka.log'
         conda_env = 'medaka'
         execute_command_in_conda_env(conda_env, command)
-        subprocess.run(f'cp ./medaka_result/consensus.fasta {output}, shell=True')
+        subprocess.run(f'cp ./medaka_result/consensus.fasta {output}', shell=True)
 
     if homopolish_model:
         if medaka_model:
@@ -72,4 +72,4 @@ if __name__=="__main__":
             command = f'homopolish polish -a {consensus} -l {ref} -m {homopolish_model} -o homopolish-output'
             conda_env = 'homopolish'
             execute_command_in_conda_env(conda_env, command)
-            subprocess.run(f'cp ./homopolish_output/consensus_homopolished.fasta {output}, shell=True')
+            subprocess.run(f'cp ./homopolish_output/consensus_homopolished.fasta {output}', shell=True)
