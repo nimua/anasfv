@@ -28,7 +28,7 @@ if __name__=="__main__":
     parser.add_argument("-p", "--processes", help="number of processes", default= 4)
     parser.add_argument("-i", "--input", help="input fasta or fastq file")
     parser.add_argument("-r", "--ref", help="a folder containing multiple ASFV genomes, or a single reference sequence file")
-    parser.add_argument("-o", "--output", help="assembled ASFV genome"
+    parser.add_argument("-o", "--output", help="assembled ASFV genome")
     parser.add_argument("--medaka", help="medaka model")
     parser.add_argument("--homopolish", help="homopolish model")
 
