@@ -65,11 +65,7 @@ if __name__=="__main__":
         subprocess.run(f'cp ./medaka_result/consensus.fasta {output}', shell=True)
 
     if homopolish_model:
-        if medaka_model:
-            consensus = './medaka_result/consensus.fasta'
-        else:
-            consensus = 'output'
-            command = f'homopolish polish -a {consensus} -l {ref} -m {homopolish_model} -o homopolish-output'
-            conda_env = 'homopolish'
-            execute_command_in_conda_env(conda_env, command)
-            subprocess.run(f'cp ./homopolish_output/consensus_homopolished.fasta {output}', shell=True)
+        command = f'homopolish polish -a {output} -l {ref} -m {homopolish_model} -o homopolish-output'
+        conda_env = 'homopolish'
+        execute_command_in_conda_env(conda_env, command)
+        subprocess.run(f'cp ./homopolish-output/{strain}_homopolished.fasta {output}', shell=True)
