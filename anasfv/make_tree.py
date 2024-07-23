@@ -80,10 +80,10 @@ if __name__=="__main__":
     subprocess.run(f'rm {output_folder}/udance.log', shell=True)
     subprocess.run(f'rm -rf {output_folder}/output', shell=True)
 
-    with open(config_file1, 'r') as file:
+    with open('config1.yaml', 'r') as file:
         data = yaml.safe_load(file)
         data['backbone'] = 'tree'
-    with open(config_file1, 'w') as file:
+    with open('config1.yaml', 'w') as file:
         yaml.safe_dump(data, file)
         
     execute_command_in_conda_env('udance', command)
