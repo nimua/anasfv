@@ -41,7 +41,7 @@ if __name__=="__main__":
 
     args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
     num_processes = args.processes
-    input_reads = args.file
+    input_folder = args.file
     output_folder = args.output
     udance_folder = args.udance
 
