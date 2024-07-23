@@ -48,10 +48,7 @@ if __name__=="__main__":
     current_path = os.getcwd()
     output_folder = get_abs_path(output_folder, current_path)
     input_folder = get_abs_path(input_folder, current_path)
-    try:
-        os.makedirs(output_folder)
-    except FileExistsError:
-        pass
+    udance_folder = get_abs_path(udance_folder, current_path)
 
     try:
         os.makedirs(output_folder)
