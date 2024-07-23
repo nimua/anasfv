@@ -34,7 +34,7 @@ if __name__=="__main__":
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     
     
-    parser.add_argument("-p", "--processes", help="number of processes", default= 4)
+    parser.add_argument("-p", "--processes", help="number of processes", type=int, default= 4)
     parser.add_argument("-f", "--file", help="dir of the fasta files")
     parser.add_argument("-o", "--output", help="output dir")
     parser.add_argument("--udance", help="path to udance dir")
@@ -56,7 +56,7 @@ if __name__=="__main__":
         pass
     
     os.chdir(output_folder)
-    subprocess.run(f'get_cds_alignments.py -f {input_folder}', shell=True)
+    # subprocess.run(f'get_cds_alignments.py -f {input_folder}', shell=True)
     
     n_taxa = len([file for file in os.listdir(input_folder) if file.endswith('.fasta')])
 
@@ -78,13 +78,12 @@ if __name__=="__main__":
     subprocess.run(f'cp {output_folder}/output/udance.maxqs.nwk {output_folder}/backbone.nwk', shell=True)
     subprocess.run(f'rm {output_folder}/udance.log', shell=True)
     subprocess.run(f'rm -rf {output_folder}/output', shell=True)
-
-    with open('config1.yaml', 'r') as file:
-        data = yaml.safe_load(file)
-        data['backbone'] = 'tree'
-    with open('config1.yaml', 'w') as file:
+    
+    
+    data['backbone'] = 'tree'
+    with open('config2.yaml', 'w') as file:
         yaml.safe_dump(data, file)
-        
+    command = f'snakemake -c {num_processes} --configfile config2.yaml --snakefile udance.smk all'
     execute_command_in_conda_env('udance', command)
     
     subprocess.run(f'mv {output_folder}/output {output_folder}/udance_output', shell=True)
