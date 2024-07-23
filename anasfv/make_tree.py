@@ -71,8 +71,7 @@ if __name__=="__main__":
     with open('config1.yaml', 'w') as file:
         yaml.safe_dump(data, file)
 
-    snakefile = os.path.join(udance_folder, 'udance.smk')
-    command = f'snakemake -c {num_processes} --configfile config1.yaml --snakefile {snakefile} all'
+    command = f'snakemake -c {num_processes} --configfile config1.yaml --snakefile udance.smk all'
     execute_command_in_conda_env('udance', command)
 
     # round2
