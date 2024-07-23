@@ -56,7 +56,7 @@ if __name__=="__main__":
         pass
     
     os.chdir(output_folder)
-    # subprocess.run(f'get_cds_alignments.py -f {input_folder}', shell=True)
+    subprocess.run(f'get_cds_alignments.py -f {input_folder}', shell=True)
     
     n_taxa = len([file for file in os.listdir(input_folder) if file.endswith('.fasta')])
 
