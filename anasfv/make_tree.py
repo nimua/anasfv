@@ -87,4 +87,4 @@ if __name__=="__main__":
     execute_command_in_conda_env('udance', command)
     
     subprocess.run(f'mv {output_folder}/output {output_folder}/udance_output', shell=True)
-    subprocess.run(f'cp {output_folder}/output/udance.maxqs.nwk {output_folder}/tree.nwk', shell=True)
+    subprocess.run(f'cp {output_folder}/udance_output/udance.maxqs.nwk {output_folder}/tree.nwk', shell=True)
