@@ -1,6 +1,6 @@
 site_name: ANASFV
 theme:
-  name: readthedocs
+  name: sphinx_rtd_theme
   highlightjs: true
 plugins:
   - search
