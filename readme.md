@@ -9,7 +9,7 @@ Part 3: Checking for any evidence of recombination between genotypes I and II.
 
 Part 4: Constructing a phylogenetic tree.
 
-Full documentation is available at [xxxx](https://github.com/).
+Full documentation is available at [readthedocs](https://anasfv.readthedocs.io/en/latest/).
 
 
 <a href="https://pypi.python.org/pypi/anasfv" rel="pypi">![PyPI](https://img.shields.io/pypi/v/anasfv?color=green) </a>
