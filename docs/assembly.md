@@ -22,7 +22,7 @@ A fasta file of the assembled ASFVgenome.
 
 ## download_asfv_genome.py
 ### Description: 
-Download all ASFV sequences between 160000 and 250000 from NCBI.
+Download all ASFV sequences with a length ranging from 160,000 to 250,000 from NCBI.
 ### Example:
 ```
 download_asfv_genome.py
