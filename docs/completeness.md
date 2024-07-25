@@ -4,7 +4,7 @@ BUSCO is a computational tool used to assess the completeness and quality of gen
 ### Description
 We generated consensus sequences from genotype I and II isolates. The CDS predicted from input ASFV genome using Prodigal were compared to consensus sequences using BLASTN (e-value 1e-5). This comparison yielded a BUSCO like genome completeness evaluation.
 ### Input
-An ASFV genome file
+An ASFV genome file.
 ### Arguments
 | Argument name	  | Required | Description |
 | --------------  | ----- | -------- |
