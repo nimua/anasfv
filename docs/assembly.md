@@ -18,7 +18,7 @@ The task requires the ONT reads and a reference sequence. If a reference sequenc
 mapping_assembly.py -p 4 -r single_fasta -i test_data.fasta -o asfv_genome.fasta --medaka r941_min_high_g303 --homopolish R9.4.pkl
 ```
 ### Output:
-A fasta file of the assembled ASFVgenome.
+A fasta file of the assembled ASFV genome.
 
 ## download_asfv_genome.py
 ### Description: 
