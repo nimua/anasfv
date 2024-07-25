@@ -10,7 +10,7 @@ ASFV genome file to be tested.
 recombination_test.py single_fasta/OQ504956.1.fasta > OQ504956.1_recombination_test.tsv
 ```
 ### Output
-A 6-column tsv table, the 6 fields are CDS name, Start, End, Similarity with GenotypeI, Similarity with GenotypeII, Conclusion.
+A 6-column tsv table, the 6 fields are **CDS name**, **Start**, **End**, **Similarity with GenotypeI**, **Similarity with GenotypeII** and **Conclusion**.
 The following table is a partial example of a recombinant
 
 | CDS | Start | End | GenotypeI | GenotypeII | Conclusion |
